@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Layla Tadjpour'
 SITENAME = 'Layla Tadjpour'
 SITEURL = ''
-
+THEME = 'Flex'
 PATH = 'content'
 
 TIMEZONE = 'America/Los_Angeles'
