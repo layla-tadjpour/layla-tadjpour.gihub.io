@@ -1,8 +1,8 @@
 Title: WHY Write A Blog?
 Date: 2017-11-26 10:01
 Modified: 2017-11-27 12:30
-Category: misc
-Tags: first, misc
+Category: General
+Tags: 
 Slug: Wwy-write-a-blog
 Authors: Layla Tadjpour
 Summary: Why write a blog?
