@@ -1,11 +1,11 @@
-Title: about-me
+Title: 
 Date: 2017-11-26 10:01
 Modified: 2017-11-27 12:30
 Category: 
 Tags: 
 Slug: about-me
 Authors: Layla Tadjpour
-Summary: about me
+Summary: 
 
 I've been self-studying machine learning and deep learning for a about year now. 
 In this blog, I will write about what I learn or what I do. 
