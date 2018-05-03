@@ -20,9 +20,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('github', 'https://github.com/layla-tadjpour'),
-         ('twitter', 'https://twitter.com/laylatadjpour'),
-         ('linkedin', 'https://www.linkedin.com/in/layla-tadjpour-6144602/'),)
+LINKS = (
+         ('about me',"https://layla-tadjpour.github.io/pages/about-me.html"),
+         ('fast.ai',"http://www.fast.ai/"),
+        )
+#LINKS = (('github', 'https://github.com/layla-tadjpour'),
+#        ('twitter', 'https://twitter.com/laylatadjpour'),
+#        ('linkedin', 'https://www.linkedin.com/in/layla-tadjpour-6144602/'),
 #         ('You can modify those links in your config file', '#'),)
 
 # Social widget
