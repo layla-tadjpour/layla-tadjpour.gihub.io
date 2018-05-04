@@ -21,7 +21,6 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-         ('about me','https://layla-tadjpour.github.io/pages/'),
          ('fast.ai',"http://www.fast.ai/"),
         )
 #LINKS = (('github', 'https://github.com/layla-tadjpour'),
@@ -44,3 +43,4 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+DISPLAY_PAGES_ON_MENU = True
