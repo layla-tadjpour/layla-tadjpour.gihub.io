@@ -7,16 +7,7 @@ Slug: about-me
 Authors: Layla Tadjpour
 Summary: 
 
-I've been self-studying machine learning and deep learning for a about year now. 
-In this blog, I will write about what I learn or what I do. 
-I beileve the best way to master something is to teach it to someone else. 
-I will be mainly focus on these courses:
+I am a freelance machine learning/software engineer and live in San Fransisco. 
+Previously, I worked as a system engineer for wireless and telecom. comapnies. 
 
--the deep learning course of fast.ai (part 1 and 2);
--the machine learning course of fast.ai;
--Python for data analysis.
-
-I will be using manily pytorch for deep learning, along with numpy and pandas. 
-I will occasionally share my personal projects and kaggle competitons that 
-I will enter to, and will write about interesting articles in deep learning
-that I come across.
+I started this blog when I started leanring about deep learning through the excellent fast.ai MOOK courses. I will be writing about the concepts that I am learning and also a variety of topics related to the social implications of AI. 
