@@ -21,8 +21,7 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-         ('contact', "layla.tadjpour@gmail.com"),
-         ('fast.ai',"http://www.fast.ai/"),
+         ("Layla Tadjpour", "https://layla-tadjpour.github.io"),
         )
 #LINKS = (('github', 'https://github.com/layla-tadjpour'),
 #        ('twitter', 'https://twitter.com/laylatadjpour'),
