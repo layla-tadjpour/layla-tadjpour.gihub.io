@@ -21,17 +21,18 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-         ("Layla Tadjpour", "https://layla-tadjpour.github.io"),
+         ('fast.ai',"http://www.fast.ai/"),
         )
-#LINKS = (('github', 'https://github.com/layla-tadjpour'),
-#        ('twitter', 'https://twitter.com/laylatadjpour'),
-#        ('linkedin', 'https://www.linkedin.com/in/layla-tadjpour-6144602/'),
-#         ('You can modify those links in your config file', '#'),)
+
+
+
+# Feeds 
+FEEDS =  (('All posts', 'feeds/all.atom.xml'),
+          ('Category', 'feeds/category'),
+          )
+
 
 # Social widget
-# SOCIAL = (('You can add links in your config file', '#'),
-#           ('Another social link', '#'),)
-
 SOCIAL = (
          ('github', 'https://github.com/layla-tadjpour'),
          ('twitter', 'https://twitter.com/laylatadjpour'),
@@ -44,3 +45,4 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 DISPLAY_PAGES_ON_MENU = True
+STATIC_PATHS = ['images']
