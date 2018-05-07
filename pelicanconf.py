@@ -4,7 +4,13 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Layla Tadjpour'
 SITENAME = 'Layla Tadjpour'
-SITEURL = ''
+SITEURL = 'https://layla-tadjpour.github.io'
+
+SITETITLE = AUTHOR
+SITESUBTITLE = u''
+SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
+SITELOGO = u'images/profile.png'
+BROWSER_COLOR = '#3333'
 THEME = 'Flex'
 PATH = 'content'
 
@@ -19,10 +25,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+MAIN_MENU = True
+
 # Blogroll
-LINKS = (
-         ('fast.ai',"http://www.fast.ai/"),
-        )
+#LINKS = (
+#         ('fast.ai',"http://www.fast.ai/"),
+#        )
 
 
 
@@ -39,10 +47,13 @@ SOCIAL = (
          ('linkedin', 'https://www.linkedin.com/in/layla-tadjpour-6144602/'),
          )
 
+MENUITEMS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html'),)
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 DISPLAY_PAGES_ON_MENU = True
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images',]
