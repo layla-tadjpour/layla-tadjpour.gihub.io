@@ -12,7 +12,7 @@ SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = u'../images/profile.png'
 BROWSER_COLOR = '#3333'
 THEME = 'Flex'
-PATH = 'content'
+PATH = '.'
 
 TIMEZONE = 'America/Los_Angeles'
 
@@ -48,7 +48,6 @@ SOCIAL = (
          )
 
 MENUITEMS = (  
-            ('Home','/'),
              ('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'),  
