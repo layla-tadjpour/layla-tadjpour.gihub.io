@@ -9,7 +9,7 @@ SITEURL = 'https://layla-tadjpour.github.io'
 SITETITLE = AUTHOR
 SITESUBTITLE = u''
 SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
-SITELOGO = u'images/profile.png'
+SITELOGO = u'../images/profile.png'
 BROWSER_COLOR = '#3333'
 THEME = 'Flex'
 PATH = 'content'
@@ -57,3 +57,4 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 DISPLAY_PAGES_ON_MENU = True
 STATIC_PATHS = ['images',]
+
