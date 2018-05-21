@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Layla Tadjpour'
 SITENAME = 'Layla Tadjpour'
-SITEURL = 'https://layla-tadjpour.github.io'
+SITEURL = 'https://layla-tadjpour.github.io/'
 
 SITETITLE = AUTHOR
 SITESUBTITLE = u''
@@ -47,10 +47,11 @@ SOCIAL = (
          ('linkedin', 'https://www.linkedin.com/in/layla-tadjpour-6144602/'),
          )
 
-MENUITEMS = (('Archives', '/archives.html'),
+MENUITEMS = (  
+            ('Home','/'),
+             ('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),
-             ('Home','/'),
+             ('Tags', '/tags.html'),  
              )
 
 DEFAULT_PAGINATION = 10
