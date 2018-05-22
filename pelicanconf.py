@@ -2,21 +2,21 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Layla Tadjpour'
-SITENAME = 'Layla Tadjpour'
-SITEURL = 'https://layla-tadjpour.github.io/'
-
+AUTHOR = u'Layla Tadjpour'
+SITENAME = u"Layla Tadjpour"
+SITEURL = u"https://layla-tadjpour.github.io"
+SITESUBURL = '/'
 SITETITLE = AUTHOR
 SITESUBTITLE = u''
 SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = u'../images/profile.png'
-BROWSER_COLOR = '#3333'
+BROWSER_COLOR = '#333'
 THEME = 'Flex'
-PATH = '.'
-
+PATH = 'content'
 TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = 'en'
+
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -25,13 +25,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+#USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
+#HOME_HIDE_TAGS = True
 
 # Blogroll
 #LINKS = (
 #         ('fast.ai',"http://www.fast.ai/"),
 #        )
-
 
 
 # Feeds 
@@ -53,10 +54,18 @@ MENUITEMS = (
              ('Tags', '/tags.html'),  
              )
 
+
+COPYRIGHT_NAME =  'Layla Tadjpour'
+
+COPYRIGHT_YEAR =  2018
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
 DISPLAY_PAGES_ON_MENU = True
 STATIC_PATHS = ['images',]
-
+MY_EMAIL_ADDR = 'layla.tadjpour@gmail.com'
+#TWITTER_USERNAME = '@laylatadjpour'
+PAGE_URL = f"{SITEURL}"
+#PAGE_SAVE_AS = f"{SITEURL}/index.html"
