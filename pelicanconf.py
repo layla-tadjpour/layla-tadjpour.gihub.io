@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Layla Tadjpour'
 SITENAME = u"Layla Tadjpour"
 SITEURL = u"https://layla-tadjpour.github.io"
-SITESUBURL = '/'
+SITESUBURL = ''
 SITETITLE = AUTHOR
 SITESUBTITLE = u''
 SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
@@ -62,10 +62,9 @@ COPYRIGHT_YEAR =  2018
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 DISPLAY_PAGES_ON_MENU = True
 STATIC_PATHS = ['images',]
 MY_EMAIL_ADDR = 'layla.tadjpour@gmail.com'
 #TWITTER_USERNAME = '@laylatadjpour'
-PAGE_URL = f"{SITEURL}"
-#PAGE_SAVE_AS = f"{SITEURL}/index.html"
+
