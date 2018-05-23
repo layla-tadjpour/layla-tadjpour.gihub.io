@@ -3,7 +3,7 @@ Date: 2018-05-23
 Modified: 2018-05-23 
 Category: General
 Tags: 
-Slug: Deep Learning For Medicine
+Slug: dl-for-medicine
 Authors: Layla Tadjpour
 Summary: Deep Learning For Medicine
 
@@ -41,5 +41,4 @@ of doctors and specialists. Nigeria, for example, would need approximately
 12 times as many doctors by 2030 (700,000 additional doctors) to catch 
 up the number of doctors per capita of 25 members of Organization for
 Economic Cooperation and Development (OECD) according to [this report
-by World Bank](http://www3.weforum.org/docs/WEF_HealthSystem_LeapfroggingEmergingEconomies_ProjectPaper_2014.pdf). So, an DL deployment in these countries can save millions 
-of lives.
+by World Bank](http://www3.weforum.org/docs/WEF_HealthSystem_LeapfroggingEmergingEconomies_ProjectPaper_2014.pdf). So, an DL deployment in these countries can save millions of lives.

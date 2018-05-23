@@ -3,7 +3,7 @@ Date: 2018-05-23
 Modified: 2018-05-23 
 Category: General
 Tags: 
-Slug: Installing GTX 1080Ti Drivers on Ubuntu 16.04
+Slug: installing-1080Ti-on-Ubuntu16.04
 Authors: Layla Tadjpour
 Summary: Installing GTX 1080Ti Drivers on Ubuntu 16.04
 
