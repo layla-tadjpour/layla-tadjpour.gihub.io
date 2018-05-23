@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Layla Tadjpour - General</title><link href="https://layla-tadjpour.github.io/" rel="alternate"></link><link href="https://layla-tadjpour.github.io/feeds/general.atom.xml" rel="self"></link><id>https://layla-tadjpour.github.io/</id><updated>2018-05-23T00:00:00-07:00</updated><entry><title>Deep Learning For Medicine</title><link href="https://layla-tadjpour.github.io/dl-for-medicine.html" rel="alternate"></link><published>2018-05-23T00:00:00-07:00</published><updated>2018-05-23T00:00:00-07:00</updated><author><name>Layla Tadjpour</name></author><id>tag:layla-tadjpour.github.io,2018-05-23:/dl-for-medicine.html</id><summary type="html">&lt;p&gt;Deep Learning For Medicine&lt;/p&gt;</summary><content type="html">&lt;p&gt;Deep learning (a particular branch of artificial intelligence) 
+has been experiencing rapid growth in the last few years. 
+In particular, deep learning researchers have been able to 
+demonstrate remarkable results in diagnostic radiology. 
+Researchers at google trained a deep learning (DL) system to 
+perform several tasks related to &lt;a href="https://jamanetwork.com/journals/jama/article-abstract/2588763"&gt;detection of diabetic retinopathy&lt;/a&gt; in retinal photos. Another DL state-of-the-art result in applied medicine was performed by researchers at Stanford University in 2107 to &lt;a href="https://www.nature.com/articles/nature21056"&gt;classify skin cancers&lt;/a&gt;. Both of these studies were able to achieve same or better results than a panel of specialists.&lt;/p&gt;
+&lt;p&gt;These spectacular results have ginned up the buzz about the 
+possibility of AI replacing medical jobs. However, there are still major 
+hurdles facing the adoption of AI in the day to day practice, including 
+finding sufficient and quality data to carry out more research and a 
+long and complicated process of clinical trials and passing government 
+regulations. On one hand, these technologies will probably 
+supplement/replace certain diagnostic tasks for doctors, particularly 
+radiologists. But on the other hand, by precipitating or helping faster
+ cancer or other diagnostics, DL could increase demands for further medical 
+ treatment and the need for training more specialists.&lt;/p&gt;
+&lt;p&gt;The more interesting development for me is that these recent advancement 
+in DL has made it possible for its deployment in developing worlds. 
+Already Google has partnered with hospitals in India to clinically test 
+its diabetic retinopathy technology. Enlitic, a leading medial DL company, 
+has begun &lt;a href="https://www.enlitic.com/press-release-04042017.html"&gt;cooperating with Paiyipai&lt;/a&gt;, a Chinese medical big data company, 
+to deploy deep learning for diagnostic imaging in health check centers 
+across China. China has far more relax regulatory framework so it makes 
+sense for leading Medical DL companies to deploy their technologies in 
+China.&lt;/p&gt;
+&lt;p&gt;Currently, there are billions of people in the world without access to 
+modern medical diagnostics. Developing countries have 10x-20x shortages 
+of doctors and specialists. Nigeria, for example, would need approximately
+12 times as many doctors by 2030 (700,000 additional doctors) to catch 
+up the number of doctors per capita of 25 members of Organization for
+Economic Cooperation and Development (OECD) according to &lt;a href="http://www3.weforum.org/docs/WEF_HealthSystem_LeapfroggingEmergingEconomies_ProjectPaper_2014.pdf"&gt;this report
+by World Bank&lt;/a&gt;. So, an DL deployment in these countries can save millions of lives.&lt;/p&gt;</content></entry><entry><title>Installing GTX 1080Ti Drivers / CUDA-8.0 on Ubuntu 16.04</title><link href="https://layla-tadjpour.github.io/installing-1080Ti-on-Ubuntu16.04.html" rel="alternate"></link><published>2018-05-23T00:00:00-07:00</published><updated>2018-05-23T00:00:00-07:00</updated><author><name>Layla Tadjpour</name></author><id>tag:layla-tadjpour.github.io,2018-05-23:/installing-1080Ti-on-Ubuntu16.04.html</id><summary type="html">&lt;p&gt;Installing GTX 1080Ti Drivers on Ubuntu 16.04&lt;/p&gt;</summary><content type="html">&lt;p&gt;Update: This tutorial should also work with CUDA 9.0 and NVIDIA Driver 390.12 with minor tweaks.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.nelsonliu.me/2017/04/29/installing-and-updating-gtx-1080-ti-cuda-drivers-on-ubuntu/"&gt;Nelson Liu's blog&lt;/a&gt; 
+has an excellent post about installing GTX 1080 Ti Drivers with Cuda 8.0 on Ubuntu 16.04.  
+I used his blog and other online material to set up the NVIDIA’s new GTX 1080Ti graphics card for use with CUDA-enabled machine learning libraries, e.g. Keras, Tensorflow and Pytorch;
+Since the card (as of this writing) was relatively new, the process was a bit cumbersome. I had to reinstall ubuntu 2 times to make it work. There are not many online resources for GTX 1080Ti and a few that I found did not work for my setup. I thought to write about my experience here.
+I recommend that you start with a fresh install of Ubuntu.&lt;/p&gt;
+&lt;h2&gt;Install CUDA without the driver&lt;/h2&gt;
+&lt;p&gt;For CUDA install without drive, &lt;a href="https://kislayabhi.github.io/Installing_CUDA_with_Ubuntu/"&gt;Abhijeet Kislay's blog&lt;/a&gt;
+helped me a lot. Although his is for CUDA 7.5 ,  I was able to make it work with CUDA 8.0 with some minor changes. So here I repeat most of his instructions with minor changes that I made to make it work for my own setup.&lt;/p&gt;
+&lt;p&gt;Note that you can not just install CUDA 8.0 by apt-get  because it comes with a driver version (375.26) that doesn't support the GTX 1080 Ti.  Thus, you have to install with the &lt;a href="http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#runfile"&gt;runfile&lt;/a&gt;, to opt-out of installing the driver. The runfile documentation was not 
+that helpful. So here is step-to-step guide: &lt;/p&gt;
+&lt;p&gt;Go to &lt;a href="https://developer.nvidia.com/cuda-downloads"&gt;this address&lt;/a&gt; and download CUDA toolkit 8.0 for Ubuntu 16.04 and select runfile local as your installer type. I have tested the 64 bit version but I think the 32 bit will work too if your machine is 32 bit.&lt;/p&gt;
+&lt;p&gt;Open up a terminal and extract the separate installers via:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;mkdir ~/Downloads/nvidia_installers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;cd ~/Downloads&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;./cuda_8.0.61_linux.run -extract=~/Downloads/nvidia_installers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It is better to start with a fresh OS install otherwise completely uninstall anything in the ubuntu repositories with nvidia. I used synaptic and did a purge, i.e., completely uninstall programs and configuration by running&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo apt-get --purge remove nvidia&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Create the /etc/modprobe.d/blacklist-nouveau.conf file with the 2 following lines:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;blacklist nouveau&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;options nouveau modeset=0&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then do a&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo update-initramfs -u&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Reboot computer. Nothing should have changed in loading up menu. You should be taken to the login screen. Once there type: Ctrl + Alt + F1, and login to your user. Keep the next commands handy in another machine since now you are in tty.&lt;/p&gt;
+&lt;p&gt;In tty mode:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;cd ~/Downloads/nvidia_installers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo /etc/init.d/lightdm stop&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I initially ran "&lt;em&gt;sudo service lightdm stop&lt;/em&gt;" but for some reason, it caused my screen to go blank.&lt;/p&gt;
+&lt;p&gt;Now, install the toolkit. Note that you don’t want to install the drivers 375 that comes with the cuda-8.0. &lt;a href="http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#runfile"&gt;Nvidia documentation&lt;/a&gt; manual states that to run "sudo sh cuda_&lt;version&gt;_linux.run"
+and the installer will prompt for the following:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;EULA Acceptance&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CUDA Driver installation&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CUDA Toolkit installation, location, and /usr/local/cuda symbolic link&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CUDA Samples installation and location&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You are supposed to ignore the driver installation. However, 
+the "-sudo sh cuda_&lt;version&gt;_linux.run-" did not work for me. Instead I ran the following commands:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo ./cuda-linux64-rel-6.0.37-18176142.run&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo ./cuda-samples-linux-6.0.37-18176142.run&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Moreover, I was not prompted for the driver installation; only EULA acceptance and the directory location for cuda.&lt;/p&gt;
+&lt;p&gt;Set Environment path variables in &lt;em&gt;.bashrc&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;export PATH=/usr/local/cuda-8.0/bin:$PATH&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Check CUDA driver version:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;nvcc -V&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;At this point you can switch the lightdm back on again by doing:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo /etc/init.d/lightdm start&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Installing the driver with apt-get&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://blog.nelsonliu.me/2017/04/29/installing-and-updating-gtx-1080-ti-cuda-drivers-on-ubuntu/"&gt;This Nelson Liu's blog post&lt;/a&gt; has more details on how to install the driver with apt-get. I repost them here for the sake of completeness. To install the driver with apt-get, I used the Ubuntu graphics-drivers PPA. This method isn't officially supported by NVIDIA, 
+but it seems to work. Also, make sure that PPA supports the version of NVIDIA driver you are using.
+Add the PPA to apt-get and update the index by running:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo add-apt-repository ppa:graphics-drivers/ppa&lt;/em&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo apt-get update&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Now, we use it to install the desired driver versions (as of this writing):
+For 1080 Ti: &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Major version 378:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;sudo apt-get install nvidia-378&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Reboot your computer, and the GPU should run on the new driver. To verify, run nvidia-smi and confirm that the Driver Version at the top of the output is what you expect.&lt;/p&gt;
+&lt;h2&gt;Verifying the installation worked&lt;/h2&gt;
+&lt;h3&gt;CUDA&lt;/h3&gt;
+&lt;p&gt;To test the CUDA installation, you can run the deviceQuery example bundled with CUDA. 
+If you navigate to the CUDA samples folder (&lt;em&gt;/usr/local/cuda#.#/samples&lt;/em&gt; or &lt;em&gt;~/NVIDIA_CUDA-#.#_Samples&lt;/em&gt; by default), you can find the deviceQuery example in &lt;em&gt;&lt;samples_dir&gt;/1_Utilities/deviceQuery&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Running sudo makein this directory should compile the CUDA source file to produce a binary file and then run
+./deviceQuery.o will produce a variety of statistics about your GPU and run some test on it. Here are some of the outputs:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CUDA Device Query (Runtime API) version (CUDART static linking)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Detected 1 CUDA Capable device(s)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Device 0: “Graphics Device”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CUDA Driver Version / Runtime Version 8.0 / 8.0&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CUDA Capability Major/Minor version number: 6.1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 8.0, CUDA Runtime Version = 8.0&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NumDevs = 1, Device0 = Graphics Device&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Result = PASS&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Drivers&lt;/h3&gt;
+&lt;p&gt;If the driver installation went properly, you should be able to run nvidia-smi and you should get an output detailing the memory usage and temp/ fan/GPU utilization.&lt;/p&gt;</content></entry><entry><title>Why Write A Blog?</title><link href="https://layla-tadjpour.github.io/why-write-a-blog.html" rel="alternate"></link><published>2018-05-03T00:00:00-07:00</published><updated>2018-05-06T00:00:00-07:00</updated><author><name>Layla Tadjpour</name></author><id>tag:layla-tadjpour.github.io,2018-05-03:/why-write-a-blog.html</id><summary type="html">&lt;p&gt;Why write a blog?&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been self-studying machine learning and deep learning for a about year now. In this blog, I will be writing about these topics and also a variety of topics related to the social implications of AI. 
+I will be using mainly pytorch for deep learning, along with numpy and pandas. &lt;/p&gt;</content></entry></feed>
