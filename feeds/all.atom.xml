@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Layla Tadjpour</title><link href="https://layla-tadjpour.github.io/" rel="alternate"></link><link href="https://layla-tadjpour.github.io/feeds/all.atom.xml" rel="self"></link><id>https://layla-tadjpour.github.io/</id><updated>2018-06-03T10:01:00-07:00</updated><entry><title>Why Write A Blog?</title><link href="https://layla-tadjpour.github.io/why-write-a-blog.html" rel="alternate"></link><published>2018-06-03T10:01:00-07:00</published><updated>2018-03-06T12:30:00-08:00</updated><author><name>Layla Tadjpour</name></author><id>tag:layla-tadjpour.github.io,2018-06-03:/why-write-a-blog.html</id><summary type="html">&lt;p&gt;Why write a blog?&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been self-studying machine learning and deep learning for a about year now. 
-In this blog, I will write about what I learn or what I do. 
-I beileve the best way to master something is to teach it to someone else. 
-I will be mainly focus on these courses:&lt;/p&gt;
-&lt;p&gt;-the deep learning course of fast.ai (part 1 and 2);
--the machine learning course of fast.ai;
--Python for data analysis.&lt;/p&gt;
-&lt;p&gt;I will be using manily pytorch for deep learning, along with numpy and pandas. I will occasionally share my personal projects and kaggle competitons that I will enter to, and will write about interesting articles in deep learning that I come across.&lt;/p&gt;</content></entry></feed>
