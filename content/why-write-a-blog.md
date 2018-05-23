@@ -1,19 +1,11 @@
 Title: Why Write A Blog?
-Date: 2018-06-03 10:01
-Modified: 2018-03-06 12:30
+Date: 2018-05-03 
+Modified: 2018-05-06 
 Category: General
 Tags: 
 Slug: why-write-a-blog
 Authors: Layla Tadjpour
 Summary: Why write a blog?
 
-I've been self-studying machine learning and deep learning for a about year now. 
-In this blog, I will write about what I learn or what I do. 
-I beileve the best way to master something is to teach it to someone else. 
-I will be mainly focus on these courses:
-
--the deep learning course of fast.ai (part 1 and 2);
--the machine learning course of fast.ai;
--Python for data analysis.
-
-I will be using manily pytorch for deep learning, along with numpy and pandas. I will occasionally share my personal projects and kaggle competitons that I will enter to, and will write about interesting articles in deep learning that I come across.
+I've been self-studying machine learning and deep learning for a about year now. In this blog, I will be writing about these topics and also a variety of topics related to the social implications of AI. 
+I will be using mainly pytorch for deep learning, along with numpy and pandas. 

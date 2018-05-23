@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://layla-tadjpour.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Layla Tadjpour Atom">
+
+
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+<meta name="author" content="Layla Tadjpour" />
+<meta name="description" content="Installing GTX 1080Ti Drivers on Ubuntu 16.04" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Layla Tadjpour"/>
+<meta property="og:title" content="Installing GTX 1080Ti Drivers / CUDA-8.0 on Ubuntu 16.04"/>
+<meta property="og:description" content="Installing GTX 1080Ti Drivers on Ubuntu 16.04"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Installing GTX 1080Ti Drivers on Ubuntu 16.04.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-05-23 00:00:00-07:00"/>
+<meta property="article:modified_time" content="2018-05-23 00:00:00-07:00"/>
+<meta property="article:author" content="./author/layla-tadjpour.html">
+<meta property="article:section" content="General"/>
+<meta property="og:image" content="../images/profile.png">
+
+  <title>Layla Tadjpour &ndash; Installing GTX 1080Ti Drivers / CUDA-8.0 on Ubuntu 16.04</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="../images/profile.png" alt="Layla Tadjpour" title="Layla Tadjpour">
+      </a>
+      <h1><a href=".">Layla Tadjpour</a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About Me</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/layla-tadjpour" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/laylatadjpour" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/layla-tadjpour-6144602/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://layla-tadjpour.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="Installing GTX 1080Ti Drivers on Ubuntu 16.04">Installing GTX 1080Ti Drivers / CUDA-8.0 on Ubuntu 16.04</h1>
+    <p>
+          Posted on Wed 23 May 2018 in <a href="./category/general.html">General</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Update: This tutorial should also work with CUDA 9.0 and NVIDIA Driver 390.12 with minor tweaks.</p>
+<p><a href="http://blog.nelsonliu.me/2017/04/29/installing-and-updating-gtx-1080-ti-cuda-drivers-on-ubuntu/">Nelson Liu's blog</a> 
+has an excellent post about installing GTX 1080 Ti Drivers with Cuda 8.0 on Ubuntu 16.04.  
+I used his blog and other online material to set up the NVIDIA’s new GTX 1080Ti graphics card for use with CUDA-enabled machine learning libraries, e.g. Keras, Tensorflow and Pytorch;
+Since the card (as of this writing) was relatively new, the process was a bit cumbersome. I had to reinstall ubuntu 2 times to make it work. There are not many online resources for GTX 1080Ti and a few that I found did not work for my setup. I thought to write about my experience here.
+I recommend that you start with a fresh install of Ubuntu.</p>
+<h2>Install CUDA without the driver</h2>
+<p>For CUDA install without drive, <a href="https://kislayabhi.github.io/Installing_CUDA_with_Ubuntu/">Abhijeet Kislay's blog</a>
+helped me a lot. Although his is for CUDA 7.5 ,  I was able to make it work with CUDA 8.0 with some minor changes. So here I repeat most of his instructions with minor changes that I made to make it work for my own setup.</p>
+<p>Note that you can not just install CUDA 8.0 by apt-get  because it comes with a driver version (375.26) that doesn't support the GTX 1080 Ti.  Thus, you have to install with the <a href="http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#runfile">runfile</a>, to opt-out of installing the driver. The runfile documentation was not 
+that helpful. So here is step-to-step guide: </p>
+<p>Go to <a href="https://developer.nvidia.com/cuda-downloads">this address</a> and download CUDA toolkit 8.0 for Ubuntu 16.04 and select runfile local as your installer type. I have tested the 64 bit version but I think the 32 bit will work too if your machine is 32 bit.</p>
+<p>Open up a terminal and extract the separate installers via:</p>
+<p><em>mkdir ~/Downloads/nvidia_installers</em></p>
+<p><em>cd ~/Downloads</em></p>
+<p><em>./cuda_8.0.61_linux.run -extract=~/Downloads/nvidia_installers</em></p>
+<p>It is better to start with a fresh OS install otherwise completely uninstall anything in the ubuntu repositories with nvidia. I used synaptic and did a purge, i.e., completely uninstall programs and configuration by running</p>
+<p><em>sudo apt-get --purge remove nvidia</em></p>
+<p>Create the /etc/modprobe.d/blacklist-nouveau.conf file with the 2 following lines:</p>
+<p><em>blacklist nouveau</em></p>
+<p><em>options nouveau modeset=0</em></p>
+<p>Then do a</p>
+<p><em>sudo update-initramfs -u</em></p>
+<p>Reboot computer. Nothing should have changed in loading up menu. You should be taken to the login screen. Once there type: Ctrl + Alt + F1, and login to your user. Keep the next commands handy in another machine since now you are in tty.</p>
+<p>In tty mode:</p>
+<p><em>cd ~/Downloads/nvidia_installers</em></p>
+<p><em>sudo /etc/init.d/lightdm stop</em></p>
+<p>I initially ran "<em>sudo service lightdm stop</em>" but for some reason, it caused my screen to go blank.</p>
+<p>Now, install the toolkit. Note that you don’t want to install the drivers 375 that comes with the cuda-8.0. <a href="http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#runfile">Nvidia documentation</a> manual states that to run "sudo sh cuda_<version>_linux.run"
+and the installer will prompt for the following:</p>
+<p><em>EULA Acceptance</em></p>
+<p><em>CUDA Driver installation</em></p>
+<p><em>CUDA Toolkit installation, location, and /usr/local/cuda symbolic link</em></p>
+<p><em>CUDA Samples installation and location</em></p>
+<p>You are supposed to ignore the driver installation. However, 
+the "-sudo sh cuda_<version>_linux.run-" did not work for me. Instead I ran the following commands:</p>
+<p><em>sudo ./cuda-linux64-rel-6.0.37-18176142.run</em></p>
+<p><em>sudo ./cuda-samples-linux-6.0.37-18176142.run</em></p>
+<p>Moreover, I was not prompted for the driver installation; only EULA acceptance and the directory location for cuda.</p>
+<p>Set Environment path variables in <em>.bashrc</em>:</p>
+<p><em>export PATH=/usr/local/cuda-8.0/bin:$PATH</em></p>
+<p><em>export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH</em></p>
+<p>Check CUDA driver version:</p>
+<p><em>nvcc -V</em></p>
+<p>At this point you can switch the lightdm back on again by doing:</p>
+<p><em>sudo /etc/init.d/lightdm start</em></p>
+<h2>Installing the driver with apt-get</h2>
+<p><a href="http://blog.nelsonliu.me/2017/04/29/installing-and-updating-gtx-1080-ti-cuda-drivers-on-ubuntu/">This Nelson Liu's blog post</a> has more details on how to install the driver with apt-get. I repost them here for the sake of completeness. To install the driver with apt-get, I used the Ubuntu graphics-drivers PPA. This method isn't officially supported by NVIDIA, 
+but it seems to work. Also, make sure that PPA supports the version of NVIDIA driver you are using.
+Add the PPA to apt-get and update the index by running:</p>
+<p><em>sudo add-apt-repository ppa:graphics-drivers/ppa</em>  </p>
+<p><em>sudo apt-get update</em></p>
+<p>Now, we use it to install the desired driver versions (as of this writing):
+For 1080 Ti: </p>
+<p><em>Major version 378:</em></p>
+<p><em>sudo apt-get install nvidia-378</em></p>
+<p>Reboot your computer, and the GPU should run on the new driver. To verify, run nvidia-smi and confirm that the Driver Version at the top of the output is what you expect.</p>
+<h2>Verifying the installation worked</h2>
+<h3>CUDA</h3>
+<p>To test the CUDA installation, you can run the deviceQuery example bundled with CUDA. 
+If you navigate to the CUDA samples folder (<em>/usr/local/cuda#.#/samples</em> or <em>~/NVIDIA_CUDA-#.#_Samples</em> by default), you can find the deviceQuery example in <em><samples_dir>/1_Utilities/deviceQuery</em>.</p>
+<p>Running sudo makein this directory should compile the CUDA source file to produce a binary file and then run
+./deviceQuery.o will produce a variety of statistics about your GPU and run some test on it. Here are some of the outputs:</p>
+<p><em>CUDA Device Query (Runtime API) version (CUDART static linking)</em></p>
+<p><em>Detected 1 CUDA Capable device(s)</em></p>
+<p><em>Device 0: “Graphics Device”</em></p>
+<p><em>CUDA Driver Version / Runtime Version 8.0 / 8.0</em></p>
+<p><em>CUDA Capability Major/Minor version number: 6.1</em></p>
+<p>...</p>
+<p><em>deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 8.0, CUDA Runtime Version = 8.0</em></p>
+<p><em>NumDevs = 1, Device0 = Graphics Device</em></p>
+<p><em>Result = PASS</em></p>
+<h3>Drivers</h3>
+<p>If the driver installation went properly, you should be able to run nvidia-smi and you should get an output detailing the memory usage and temp/ fan/GPU utilization.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; Layla Tadjpour 2018</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Layla Tadjpour ",
+  "url" : ".",
+  "image": "../images/profile.png",
+  "description": "Layla Tadjpour's Thoughts and Writings"
+}
+</script>
+
+</body>
+</html>
